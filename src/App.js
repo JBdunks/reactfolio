@@ -1,14 +1,14 @@
 import React from "react";
-import Nav from "./components/nav/nav";
-import Main from "./components/main/main";
+import ButtonAppBar from "./components/nav/nav";
+import FullWidthGrid from "./components/main/main";
 
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Nav />
-      <Main />
+      <ButtonAppBar />
+      <FullWidthGrid />
     </>
   );
 }
