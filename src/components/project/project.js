@@ -5,13 +5,12 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PublicIcon from "@material-ui/icons/Public";
 import data from "../../projects.js";
 import IconButton from "@material-ui/core/IconButton";
-import { Grid } from "@material-ui/core";
+
 console.log(data);
 
 const useStyles = makeStyles({
@@ -20,12 +19,14 @@ const useStyles = makeStyles({
   },
   bottom: {
     justifyContent: "space-around",
-    background: "lightgray",
+    background: "#3F51B5",
+  },
+  links: {
+    color: "white",
   },
 });
 
-const Project = (props) => {
-  const { id, name, image, description, git, deployed } = props;
+const Project = ({ id, name, image, description, git, deployed }) => {
   const classes = useStyles();
   return (
     <>
@@ -42,14 +43,14 @@ const Project = (props) => {
           </CardContent>
         </CardActionArea>
         <CardActions className={classes.bottom}>
-          <IconButton size="small" color="primary">
+          <IconButton size="medium">
             <a href={git} target="_blank">
-              <GitHubIcon color="primary" />
+              <GitHubIcon fontSize="large" className={classes.links} />
             </a>
           </IconButton>
-          <IconButton size="small" color="primary">
+          <IconButton size="medium">
             <a href={deployed} target="_blank">
-              <PublicIcon color="primary" />
+              <PublicIcon fontSize="large" className={classes.links} />
             </a>
           </IconButton>
         </CardActions>

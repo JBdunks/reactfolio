@@ -4,7 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -12,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     paddingBottom: 50,
+  },
+  links: {
+    color: "white",
+    textDecoration: "none",
   },
 
   appBar: {
@@ -26,9 +29,25 @@ export default function Footer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper square className={classes.paper}></Paper>
-      <AppBar position="fixed" color="primary" className={classes.appBar}>
-        <Toolbar></Toolbar>
+
+      <AppBar
+        position="absolute
+      "
+        color="primary"
+        className={classes.appBar}
+      >
+        <Toolbar>
+          <Typography>
+            Made With{" "}
+            <a
+              className={classes.links}
+              href="https://material-ui.com/"
+              target="_blank"
+            >
+              Material-ui
+            </a>{" "}
+          </Typography>
+        </Toolbar>
       </AppBar>
     </React.Fragment>
   );
