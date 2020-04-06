@@ -9,67 +9,53 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PublicIcon from "@material-ui/icons/Public";
-import data from "../../projects.json";
+import data from "../../projects.js";
+import IconButton from "@material-ui/core/IconButton";
+import { Grid } from "@material-ui/core";
 console.log(data);
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
   media: {
-    height: 140,
+    height: 180,
+  },
+  bottom: {
+    justifyContent: "space-around",
+    background: "lightgray",
   },
 });
 
-const Project = () => {
+const Project = (props) => {
+  const { id, name, image, description, git, deployed } = props;
   const classes = useStyles();
   return (
     <>
-      {data.projects.map((project) => (
-        <Card className={classes.root} key={project.id}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {project.name}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {project.description}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              <a href={project.git} target="_blank">
-                <GitHubIcon color="primary" />
-                GitHub
-              </a>
-            </Button>
-            <Button size="small" color="primary">
-              <a href={project.deployed} target="_blank">
-                <PublicIcon color="primary" />
-                Deployed
-              </a>
-            </Button>
-          </CardActions>
-        </Card>
-      ))}
+      <Card className={classes.root} key={id}>
+        <CardActionArea>
+          <CardMedia className={classes.media} image={image} title={name} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {name}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions className={classes.bottom}>
+          <IconButton size="small" color="primary">
+            <a href={git} target="_blank">
+              <GitHubIcon color="primary" />
+            </a>
+          </IconButton>
+          <IconButton size="small" color="primary">
+            <a href={deployed} target="_blank">
+              <PublicIcon color="primary" />
+            </a>
+          </IconButton>
+        </CardActions>
+      </Card>
     </>
   );
 };
 
 export default Project;
-
-{
-  /* <div key={project.id}>
-<p>{project.name}</p>
-<p>{project.image}</p>
-<p>{project.git}</p>
-<p>{project.deployed}</p>
-<p>---------------------</p>
-</div> */
-}
