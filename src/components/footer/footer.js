@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     top: "auto",
     bottom: 0,
+    position: "static",
   },
 }));
 
@@ -30,12 +31,7 @@ export default function Footer() {
     <React.Fragment>
       <CssBaseline />
 
-      <AppBar
-        position="absolute
-      "
-        color="primary"
-        className={classes.appBar}
-      >
+      <AppBar color="primary" className={classes.appBar}>
         <Toolbar>
           <Typography>
             Made With{" "}

@@ -8,6 +8,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AssignmentIcon from "@material-ui/icons/Assignment";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   links: {
     color: "white",
+    textDecoration: "none",
   },
 }));
 
@@ -32,8 +34,14 @@ export default function Nav() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Jon Butler
+            <Link className={classes.links} to="/">
+              Jon Butler /{" "}
+            </Link>
+            <Link className={classes.links} to="/projects">
+              Projects
+            </Link>
           </Typography>
+
           <IconButton>
             <a href="https://github.com/JBdunks" target="_blank">
               <AssignmentIcon fontSize="large" className={classes.links} />
