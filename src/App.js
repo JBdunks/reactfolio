@@ -19,8 +19,8 @@ function App() {
           </Grid>
           <Grid item container>
             <Switch>
-              <Route path="/reactfolio/projects" exact component={Body} />
-              <Route path="/reactfolio/" exact component={Container} />
+              <Route path="/reactfolio/about" exact component={Container} />
+              <Route path="/reactfolio/" exact component={Body} />
             </Switch>
           </Grid>
 

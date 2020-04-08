@@ -34,10 +34,10 @@ export default function Nav() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link className={classes.links} to="/">
+            <Link className={classes.links} to="/reactfolio/about">
               Jon Butler /{" "}
             </Link>
-            <Link className={classes.links} to="/projects">
+            <Link className={classes.links} to="/reactfolio">
               Projects
             </Link>
           </Typography>
