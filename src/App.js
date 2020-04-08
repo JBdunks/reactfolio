@@ -1,10 +1,10 @@
 import React from "react";
 import Nav from "./components/nav/nav";
-import Main from "./components/main/main";
 import Footer from "./components/footer/footer";
 import { Grid } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import About from "./components/about/about";
+import Container from "./components/about/container";
+import Body from "./components/body/body";
 
 import "./App.css";
 
@@ -18,15 +18,12 @@ function App() {
             <br />
           </Grid>
           <Grid item container>
-            <Grid item xs={false} sm={2} />
-            <Grid item xs={12} sm={8}>
-              <Switch>
-                <Route path="/projects" exact component={Main} />
-                <Route path="/" exact component={About} />
-              </Switch>
-            </Grid>
-            <Grid item xs={false} sm={2} />
+            <Switch>
+              <Route path="/reactfolio/projects" exact component={Body} />
+              <Route path="/reactfolio/" exact component={Container} />
+            </Switch>
           </Grid>
+
           <br />
           <Footer />
         </Grid>
@@ -36,10 +33,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <Switch>
-                <Route path="/projects" exact component={Main} />
-                <Route path="/" exact component={About} />
-              </Switch> */
-}

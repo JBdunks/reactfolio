@@ -43,7 +43,10 @@ export default function Nav() {
           </Typography>
 
           <IconButton>
-            <a href="https://github.com/JBdunks" target="_blank">
+            <a
+              href="https://drive.google.com/file/d/1hJhke1pWlvIoJ0L6qdCHwOzvX3gAmA1-/view?usp=sharing"
+              target="_blank"
+            >
               <AssignmentIcon fontSize="large" className={classes.links} />
             </a>
           </IconButton>

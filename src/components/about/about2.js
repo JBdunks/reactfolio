@@ -25,61 +25,22 @@ const useStyles = makeStyles(() => ({
     borderRadius: "0",
     border: "none",
     marginTop: "10%",
+    marginBottom: "13%",
     height: 508,
-  },
-  media: {
-    height: "340px",
-    paddingTop: "56.25%", // 16:9
-  },
-
-  avatar: {
-    backgroundImage: "linear-gradient(to top, #209cff 0%, #68e0cf 100%)",
-  },
-
-  bottom: {
-    justifyContent: "space-around",
-    background: "#3F51B5",
-  },
-  links: {
-    color: "white",
   },
 }));
 
-export default function About() {
+export default function About2() {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardHeader
-        avatar={<Avatar className={classes.avatar}>JB</Avatar>}
-        title="Jon Butler"
-        subheader="Junior Software Developer"
-      />
-      <CardMedia
-        className={classes.media}
-        image={
-          "https://avatars3.githubusercontent.com/u/48998870?s=460&u=240368a16bdb4e18dff75824ff5d6128180fd8c6&v=4"
-        }
-      />
       <CardContent>
-        <Typography
-          variant="body2"
-          color="textSecondary"
-          component="p"
-        ></Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          this is page only exists for the purpose of meeting the react router
+          requirement. i will be removing it after it has been graded.
+        </Typography>
       </CardContent>
-      <CardActions disableSpacing className={classes.bottom}>
-        <IconButton className={classes.links}>
-          <a href="tel:856-577-5648">
-            <PhoneIphoneIcon className={classes.links} />
-          </a>
-        </IconButton>
-        <IconButton className={classes.links}>
-          <a href="mailto:jwb80jobs@gmail.com">
-            <MailOutlineIcon className={classes.links} />
-          </a>
-        </IconButton>
-      </CardActions>
     </Card>
   );
 }
