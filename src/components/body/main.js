@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Grid } from "@material-ui/core";
 import projectList from "../../projects.js";
 import Project from "../project/project";

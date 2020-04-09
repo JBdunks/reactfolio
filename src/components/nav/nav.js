@@ -4,7 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AssignmentIcon from "@material-ui/icons/Assignment";
@@ -46,17 +45,26 @@ export default function Nav() {
             <a
               href="https://drive.google.com/file/d/1hJhke1pWlvIoJ0L6qdCHwOzvX3gAmA1-/view?usp=sharing"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <AssignmentIcon fontSize="large" className={classes.links} />
             </a>
           </IconButton>
           <IconButton>
-            <a href="https://github.com/JBdunks" target="_blank">
+            <a
+              href="https://github.com/JBdunks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubIcon fontSize="large" className={classes.links} />
             </a>
           </IconButton>
           <IconButton>
-            <a href="https://www.linkedin.com/in/jwb80jobs" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/jwb80jobs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <LinkedInIcon fontSize="large" className={classes.links} />
             </a>
           </IconButton>
