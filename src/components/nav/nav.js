@@ -43,7 +43,7 @@ export default function Nav() {
 
           <IconButton>
             <a
-              href="https://drive.google.com/file/d/1hJhke1pWlvIoJ0L6qdCHwOzvX3gAmA1-/view?usp=sharing"
+              href="https://drive.google.com/file/d/1g-UUzBZGVNK1oA3uhIzIKrrrLU2545z-/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -61,7 +61,7 @@ export default function Nav() {
           </IconButton>
           <IconButton>
             <a
-              href="https://www.linkedin.com/in/jwb80jobs"
+              href="https://www.linkedin.com/in/jwb2472"
               target="_blank"
               rel="noopener noreferrer"
             >
