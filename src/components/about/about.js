@@ -71,7 +71,7 @@ export default function About() {
           </a>
         </IconButton>
         <IconButton>
-          <a className={classes.links} href="mailto:jwb80jobs@gmail.com">
+          <a className={classes.links} href="mailto:jwb2472@gmail.com">
             <MailOutlineIcon /> jwb80jobs@gmail.com
           </a>
         </IconButton>
